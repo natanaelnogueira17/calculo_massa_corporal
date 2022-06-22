@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX01 </title>
+
+    <style>
+        body{
+            font-size: 30px;
+            background-color: black;
+            color: white;
+        }
+    </style>
+    
+</head>
+<body>
+
+    
+
+
+    <div class="calculo-indice-corporal">
+        <script>
+            var nome = prompt('Digite o seu nome:   ')
+            var altura = parseFloat(prompt('Digite sua altura em cm:    '))
+            var peso =  parseFloat(prompt('Digite o peso em kg:   '))
+            var alturaM = parseFloat(altura / 100)
+
+            var calculoIndiceCorporal = peso / (alturaM*alturaM)
+            var indiceMassaCorporal = calculoIndiceCorporal
+            
+
+                if( indiceMassaCorporal < 16 ){
+                     var classificacao = "Baixo peso muito grave"
+
+                } else if(indiceMassaCorporal >= 16 && indiceMassaCorporal <= 16.99){
+                    var classificacao = 'Baixo peso grave'
+                } else if (indiceMassaCorporal >= 17 && indiceMassaCorporal <= 18.49 ){
+                    var classificacao = 'Baixo peso'
+                } else if (indiceMassaCorporal >= 18.50 && indiceMassaCorporal <=24.99){
+                   var classificacao= 'Peso normal'
+                }else if(indiceMassaCorporal>=25 && indiceMassaCorporal<= 29.99){
+                    var classificacao = 'sobrepeso'
+                }else if(indiceMassaCorporal>=30 && indiceMassaCorporal <=34.99){
+                    var classificacao = 'obesidade grau I'
+                }else if(indiceMassaCorporal >= 35 && indiceMassaCorporal <= 39.99){
+                    var classificacao = 'obesidade grau II'
+                } else if(indiceMassaCorporal > 40){
+                    var classificacao = 'obesidade grau III ta uma bomba, cuidado!'
+                } else{
+                    var classificacao = 'você está completamente sem noção'
+                }          
+                    
+
+                document.write(`“${nome} possui índice de massa corporal igual a ${indiceMassaCorporal}, sendo classificado como: ${classificacao}.” `)
+
+
+
+
+
+
+
+        </script>
+
+    </div>
+</body>
+</html>
